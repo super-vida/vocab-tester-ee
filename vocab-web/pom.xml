@@ -2,12 +2,14 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>cz.gpe.prague.vida</groupId>
-	<artifactId>primefaces</artifactId>
+	<parent>
+		<groupId>cz.prague.vida.vocab.ee</groupId>
+		<artifactId>vocab-tester</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+	<artifactId>vocab-web</artifactId>
 	<packaging>war</packaging>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>primefaces Maven Webapp</name>
-	<url>http://maven.apache.org</url>
+	<name>vocab-web</name>
 	<dependencies>
 
 
@@ -38,7 +40,7 @@
 		</dependency>
 
 		<dependency>
-			<groupId>vocab-tester</groupId>
+			<groupId>cz.prague.vida.vocab.ee</groupId>
 			<artifactId>vocab-ejb</artifactId>
 			<version>1.0.0-SNAPSHOT</version>
 			<scope>provided</scope>
@@ -48,28 +50,24 @@
 		<dependency>
 			<groupId>javax</groupId>
 			<artifactId>javaee-api</artifactId>
-			<version>8.0</version>
 			<scope>provided</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
-			<version>5.3.7.Final</version>
 			<scope>provided</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
-			<version>5.3.7.Final</version>
 			<scope>provided</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>com.enigmabridge</groupId>
 			<artifactId>hibernate4-sqlite-dialect</artifactId>
-			<version>0.1.2</version>
 		</dependency>
 
 
