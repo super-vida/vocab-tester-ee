@@ -1,0 +1,94 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+
+</h:head>
+
+<h:body>
+	<h:form>
+
+
+
+		<p:layout fullPage="true">
+
+			<p:layoutUnit position="north" size="100" header="Top"
+				resizable="true" collapsible="true">
+				<h:outputText value="North unit content." />
+			</p:layoutUnit>
+
+			<p:layoutUnit position="south" size="100" header="Bottom"
+				resizable="true" collapsible="true">
+				<h:outputText value="South unit content." />
+			</p:layoutUnit>
+
+			<p:layoutUnit position="west" size="200" header="Menu"
+				resizable="true" collapsible="true">
+				<p:menu toggleable="true">
+					<p:submenu label="Ajax">
+						<p:menuitem value="Save" action="#{menuView.save}"
+							icon="pi pi-save" />
+						<p:menuitem value="Update" action="#{menuView.update}"
+							icon="pi pi-refresh" />
+					</p:submenu>
+					<p:submenu label="Non-Ajax">
+						<p:menuitem value="Delete" action="#{menuView.delete}"
+							ajax="false" icon="pi pi-times" />
+					</p:submenu>
+					<p:submenu label="Navigations">
+						<p:menuitem value="External" url="http://www.primefaces.org"
+							icon="pi pi-home" />
+						<p:menuitem value="Internal" icon="pi pi-star" />
+					</p:submenu>
+				</p:menu>
+
+			</p:layoutUnit>
+
+			<p:layoutUnit position="east" size="200" header="Right"
+				resizable="true" collapsible="true" effect="drop">
+				<h:outputText value="Right unit content." />
+			</p:layoutUnit>
+
+			<p:layoutUnit position="center">
+				<p:dataTable value="#{keyboardBean.words}" var="w" rows="10"
+                 paginator="true"
+                 paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                 rowsPerPageTemplate="5,10,15">
+					<p:column headerText="Id">
+						<h:outputText value="#{w.id}" />
+					</p:column>
+
+					<p:column headerText="Language">
+						<h:outputText value="#{w.language}" />
+					</p:column>
+
+					<p:column headerText="Text">
+						<h:outputText value="#{w.text}" />
+					</p:column>
+
+					<p:column headerText="Language">
+						<h:outputText value="#{w.language}" />
+					</p:column>
+
+					<p:column headerText="CorrectCount">
+						<h:outputText value="#{w.correctCount}" />
+					</p:column>
+
+					<p:column headerText="IncorrectCount">
+						<h:outputText value="#{w.incorrectCount}" />
+					</p:column>
+
+				</p:dataTable>
+			</p:layoutUnit>
+
+		</p:layout>
+
+
+
+
+
+	</h:form>
+</h:body>
+</html>
