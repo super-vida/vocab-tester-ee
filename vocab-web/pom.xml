@@ -42,7 +42,7 @@
 		<dependency>
 			<groupId>cz.prague.vida.vocab.ee</groupId>
 			<artifactId>vocab-ejb</artifactId>
-			<version>1.0.0-SNAPSHOT</version>
+			<version>${project.version}</version>
 			<scope>provided</scope>
 		</dependency>
 
