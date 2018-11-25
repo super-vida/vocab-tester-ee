@@ -1,1 +1,12 @@
-vocab-build/.project
+/vocab-build/.project
+/vocab-build/.classpath
+/vocab-build/.settings
+/vocab-build/target
+/vocab-ejb/.project
+/vocab-ejb/.classpath
+/vocab-ejb/.settings
+/vocab-ejb/target
+/vocab-web/.project
+/vocab-web/.classpath
+/vocab-web/.settings
+/vocab-web/target
